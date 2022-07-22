@@ -20,3 +20,4 @@ var area, circumference = calculate(diameter)
 fmt.Printf("Luas lingkaran\t\t: %.2f \n", area)
 fmt.Printf("Keliling lingkaran\t: %.2f \n", circumference)
 }
+
