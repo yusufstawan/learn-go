@@ -11,4 +11,7 @@ func main() {
 
 	result := calculation.Add(10, 20)
 	fmt.Println(result)
+
+	perkalian := calculation.Mulitiply(4, 5)
+	fmt.Println(perkalian)
 }
