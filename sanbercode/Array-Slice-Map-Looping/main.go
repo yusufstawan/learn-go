@@ -55,18 +55,64 @@ func main() {
 	// fmt.Println(fruits)
 	// fmt.Println(cfruits)
 
-	var fruits = []string{"apple", "grape", "banana"}
-	var bFruits = fruits[0:2]
+	// var fruits = []string{"apple", "grape", "banana"}
+	// var bFruits = fruits[0:2]
 
-	fmt.Println(cap(bFruits)) // 3
-	fmt.Println(len(bFruits)) // 2
+	// fmt.Println(cap(bFruits)) // 3
+	// fmt.Println(len(bFruits)) // 2
 
-	fmt.Println(fruits)  // ["apple", "grape", "banana"]
-	fmt.Println(bFruits) // ["apple", "grape"]
+	// fmt.Println(fruits)  // ["apple", "grape", "banana"]
+	// fmt.Println(bFruits) // ["apple", "grape"]
 
-	var cFruits = append(bFruits, "papaya")
+	// var cFruits = append(bFruits, "papaya")
 
-	fmt.Println(fruits)  // ["apple", "grape", "papaya"]
-	fmt.Println(bFruits) // ["apple", "grape"]
-	fmt.Println(cFruits) // ["apple", "grape", "papaya"]
+	// fmt.Println(fruits)  // ["apple", "grape", "papaya"]
+	// fmt.Println(bFruits) // ["apple", "grape"]
+	// fmt.Println(cFruits) // ["apple", "grape", "papaya"]
+
+	// fungsi copy
+	// dst := make([]string, 3)
+	// src := []string{"watermelon", "pinnaple", "apple", "orange"}
+	// n := copy(dst, src)
+
+	// fmt.Println(dst) // watermelon pinnaple apple
+	// fmt.Println(src) // watermelon pinnaple apple orange
+	// fmt.Println(n)   // 3
+
+	// ======================= MAP =======================
+	// var chicken map[string]int
+	// chicken = map[string]int{}
+
+	// chicken["januari"] = 50
+	// chicken["februari"] = 40
+
+	// fmt.Println("januari", chicken["januari"]) // januari 50
+	// fmt.Println("mei", chicken["mei"])         // mei 0
+
+	// menghapus elemen map
+	// var chicken = map[string]int{"januari": 50, "februari": 40}
+
+	// fmt.Println(len(chicken)) // 2
+	// fmt.Println(chicken)
+
+	// delete(chicken, "januari")
+
+	// fmt.Println(len(chicken)) // 1
+	// fmt.Println(chicken)
+
+	// var chicken = map[string]int{"januari": 50, "februari": 40}
+	// var value, isExist = chicken["januari"]
+
+	// if isExist {
+	// 	fmt.Println(value)
+	// } else {
+	// 	fmt.Println("item is not exists")
+	// }
+
+	// ======================= Looping =======================
+	// Perulangan Menggunakan Keyword for
+
+	for i := 0; i < 5; i++ {
+		fmt.Println("Angka", i)
+	}
 }
