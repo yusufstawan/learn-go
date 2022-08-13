@@ -54,12 +54,28 @@ func yourHobbies(name string, hobbies ...string) {
 	}
 }
 
+// Function as Parameter
+// function yang menggunakan function sebagai parameternya
+func sayHelloWithFilter(name string, filter func(string) string) {
+	nameFiltered := filter(name)
+	fmt.Println("Hello", nameFiltered)
+}
+
+// function yang digunakan sebagai parameter
+func spamFilter(name string) string {
+	if name == "Kasar" {
+		return "..."
+	} else {
+		return name
+	}
+}
+
 func main() {
 	printHello()
 	printAngka(10, 20)
 
 	// langsung panggil dalam print
-	fmt.Println(introduction(("Yusuf")))
+	fmt.Println(introduction("Yusuf"))
 
 	// menggunakan variable
 	result := introduction("Yusuf")
@@ -96,4 +112,30 @@ func main() {
 
 	var hobbies = []string{"Sleeping", "Eating"}
 	yourHobbies("Yusuf", hobbies...)
+
+	// Closure Function
+	var getMinMax = func(n []int) (int, int) {
+		var min, max int
+		for i, e := range n {
+			switch {
+			case i == 0:
+				max, min = e, e
+			case e > max:
+				max = e
+			case e < min:
+				min = e
+			}
+		}
+		return min, max
+	}
+
+	var numbers3 = []int{2, 6, 7, 8, 9, 10}
+	var min, max = getMinMax(numbers3)
+	fmt.Println("data :", numbers)
+	fmt.Println("min :", min)
+	fmt.Println("max :", max)
+
+	// Function as Parameter
+	sayHelloWithFilter("Yusuf", spamFilter)
+	sayHelloWithFilter("Kasar", spamFilter)
 }
