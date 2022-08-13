@@ -36,6 +36,24 @@ func tampilkanKatadanAngka() (firstWord, secondWord string, number int) {
 	return
 }
 
+// Variadic Function
+func sum(numbers ...int) int {
+	var total int = 0
+	for _, number := range numbers {
+		total += number
+	}
+	return total
+}
+
+// Function Dengan Parameter Biasa & Variadic
+func yourHobbies(name string, hobbies ...string) {
+	fmt.Println("Hello, my name is ", name)
+	fmt.Println("My hobbies are: ")
+	for _, hobby := range hobbies {
+		fmt.Println(hobby)
+	}
+}
+
 func main() {
 	printHello()
 	printAngka(10, 20)
@@ -64,4 +82,18 @@ func main() {
 
 	kataPertama, kataKedua, angka := tampilkanKatadanAngka()
 	fmt.Println(kataPertama, kataKedua, angka)
+
+	// variadic function
+	var total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+	fmt.Println(total)
+
+	// Pengisian Parameter Fungsi Variadic Menggunakan Data Slice
+	var numbers = []int{2, 6, 7, 8, 9, 10}
+	var total2 = sum(numbers...)
+	fmt.Println(total2)
+
+	yourHobbies("John", "Gaming", "Reading", "Coding")
+
+	var hobbies = []string{"Sleeping", "Eating"}
+	yourHobbies("Yusuf", hobbies...)
 }
