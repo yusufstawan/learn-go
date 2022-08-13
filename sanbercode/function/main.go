@@ -23,6 +23,19 @@ func introduction2(firstName string, lastName string) (string, string) {
 	return introFirstName, introLastName
 }
 
+// Function Predefined return value
+func tambahAngka(firstNumber int, lastNumber int) (jumlah int) {
+	jumlah = firstNumber + lastNumber
+	return
+}
+
+func tampilkanKatadanAngka() (firstWord, secondWord string, number int) {
+	firstWord = "Halo"
+	secondWord = "Dunia"
+	number = 10
+	return
+}
+
 func main() {
 	printHello()
 	printAngka(10, 20)
@@ -45,4 +58,10 @@ func main() {
 	// menggunakan 2 variable satu tidak dogunakan
 	firstName2, _ := introduction2("Yusuf", "Setiyawan")
 	fmt.Println(firstName2)
+
+	hasil := tambahAngka(3, 2)
+	fmt.Println(hasil)
+
+	kataPertama, kataKedua, angka := tampilkanKatadanAngka()
+	fmt.Println(kataPertama, kataKedua, angka)
 }
